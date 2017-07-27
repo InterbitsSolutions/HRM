@@ -33,7 +33,7 @@
                                     ?>" data-format="yyyy/mm/dd">
 
                                     <div class="input-group-addon">
-                                        <a href="#"><i class="entypo-calendar"></i></a>
+                                        <a href="javascript:void(0)"><i class="entypo-calendar start-calender"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@
                                     ?>"  data-format="yyyy/mm/dd">
 
                                     <div class="input-group-addon">
-                                        <a href="#"><i class="entypo-calendar"></i></a>
+                                        <a href="javascript:void(0)"><i class="entypo-calendar end-calender"></i></a>
                                     </div>
                                 </div>
                             </div>

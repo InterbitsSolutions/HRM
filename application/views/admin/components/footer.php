@@ -16,6 +16,7 @@
     <script>
     $(document).ready(function() {
     	
+        $('#cke_1_bottom').hide();
     	$(document).on("keyup blur","#first_name,#last_name,#father_name",function(){
         	var $th = $(this);
         	$th.val( $th.val().replace(/[^a-zA-Z!@#$&()\\-`.+,/\%* ]/g, function(str) { return ''; } ) );
@@ -25,18 +26,39 @@
         	$th.val( $th.val().replace(/[^0-9+ -]/g, function(str) { return ''; } ) );
     	});
     	$(document).on("click","#submit",function(){
-    		var startDate = $('#start_date_event').val();
-    		var endDate = $('#end_date_event').val();
-    		alert(Date.parse(startDate)+'=='+endDate);return false;
-    		if(Date.parse(startDate) < Date.parse(endDate)){
-			   alert("Invalid Date Range");
+    		var startDate = Date.parse($('#start_date_event').val());
+    		var endDate = Date.parse($('#end_date_event').val());
+    		if(startDate > endDate){
+			   alert("Invalid Date Range ! Please check again..");
 			   return false;
-			}
-			else{
+			}else{
 			   return true;
 			}
     	});
-    	
+    	$('.start-calender').click(function(event){
+            event.preventDefault();
+            $('#start_date_event').focus();
+        });
+        $('.end-calender').click(function(event){
+            event.preventDefault();
+            $('#end_date_event').focus();
+        });
+        $('.emp_dob').click(function(event){
+            event.preventDefault();
+            $('#emp_date_picker').focus();
+        });
+        $('.emp_join').click(function(event){
+            event.preventDefault();
+            $('#joining_date').focus();
+        });
+        $('.empawrd').click(function(event){
+            event.preventDefault();
+            $('#award_date').focus();
+        });
+        $(document).on("keyup blur","input[name='award_amount']",function(){
+            var $th = $(this);
+            $th.val( $th.val().replace(/[^0-9.]/g, function(str) { return ''; } ) );
+        });
         $("[id^=dataTables-example]").dataTable();        
     });
     </script>

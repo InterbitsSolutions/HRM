@@ -54,7 +54,7 @@ class Employee extends Admin_Controller {
     public function save_employee($id = NULL) {
         // **** Employee Personal Details,Contact Details and Official Status Save And Update Start *** 
         //input post
-        $data = $this->employee_model->array_from_post(array('first_name', 'last_name', 'date_of_birth', 'gender', 'maratial_status', 'father_name', 'nationality',
+        $data = $this->employee_model->array_from_post(array('first_name', 'last_name', 'date_of_birth', 'gender', 'maratial_status', 'father_name', 'nationality','adharcard_no',
             'passport_number', 'present_address', 'city', 'country_id', 'mobile', 'phone', 'email', 'employment_id', 'designations_id', 'joining_date'));
         //image upload
 

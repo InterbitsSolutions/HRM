@@ -1,7 +1,7 @@
 <?php include_once 'asset/admin-ajax.php'; ?>
 <?php echo message_box('success'); ?>
 <?php echo message_box('error'); ?>
-
+<?php //echo '<pre>';print_r($this->language->from_body()); ?>
 <form role="form" id="employee-form" enctype="multipart/form-data" action="<?php echo base_url() ?>admin/employee/save_employee/<?php
 if (!empty($employee_info->employee_id)) {
     echo $employee_info->employee_id;
@@ -43,13 +43,13 @@ if (!empty($employee_info->employee_id)) {
                     <div class="">
                         <label class="control-label" ><?php echo $this->language->from_body()[12][3] ?> <span class="required"> *</span></label>
                         <div class="input-group">
-                            <input type="text" name="date_of_birth" value="<?php
+                            <input type="text" name="date_of_birth" id="emp_date_picker" value="<?php
                             if (!empty($employee_info->date_of_birth)) {
                                 echo $employee_info->date_of_birth;
                             }
                             ?>" class="form-control datepicker" data-format="yyy-mm-dd">
                             <div class="input-group-addon">
-                                <a href="#"><i class="entypo-calendar"></i></a>
+                                <a href="javascript:void(0)"><i class="entypo-calendar emp_dob"></i></a>
                             </div>
                         </div>
                     </div>
@@ -115,6 +115,14 @@ if (!empty($employee_info->employee_id)) {
                                 ?>><?php echo $v_country->countryName ?></option>
                                     <?php endforeach; ?>
                         </select> 
+                    </div>
+                    <div class="">
+                        <label class="control-label" ><?php echo $this->language->from_body()[12][10] ?> <span class="required"> *</span></label>
+                        <input type="text" name="adharcard_no" id="adharcard_no" value="<?php
+                        if (!empty($employee_info->adharcard_no)) {
+                            echo $employee_info->adharcard_no;
+                        }
+                        ?>"  class="form-control">
                     </div>
                     <div class="" id="nationality">
                         <label class="control-label" ><?php echo $this->language->from_body()[12][8] ?></label>
@@ -531,13 +539,13 @@ if (!empty($employee_info->employee_id)) {
                     <div class="">
                         <label for="field-1" class="control-label"><?php echo $this->language->from_body()[12][33] ?> <span class="required">*</span></label>
                         <div class="input-group">
-                            <input type="text" class="form-control datepicker" name="joining_date" value="<?php
+                            <input type="text" class="form-control datepicker" name="joining_date" id="joining_date" value="<?php
                             if (!empty($employee_info->joining_date)) {
                                 echo $employee_info->joining_date;
                             }
                             ?>" data-format="yyyy/mm/dd" >
                             <div class="input-group-addon">
-                                <a href="#"><i class="entypo-calendar"></i></a>
+                                <a href="javascipt:void(0)"><i class="entypo-calendar emp_join"></i></a>
                             </div>
                         </div>
                     </div>                    

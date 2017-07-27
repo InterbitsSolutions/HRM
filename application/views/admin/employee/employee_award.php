@@ -99,13 +99,13 @@
 
                                 <div class="col-sm-5">
                                     <div class="input-group">
-                                        <input type="text" name="award_date" placeholder="Enter Month"  class="form-control monthyear" value="<?php
+                                        <input type="text" name="award_date" id="award_date" placeholder="Enter Month"  class="form-control monthyear" value="<?php
                                         if (!empty($award_info->award_date)) {
                                             echo $award_info->award_date;
                                         }
                                         ?>" data-format="dd-mm-yyyy">
                                         <div class="input-group-addon">
-                                            <a href="#"><i class="entypo-calendar"></i></a>
+                                            <a href="javascript;void(0)"><i class="entypo-calendar empawrd"></i></a>
                                         </div>
                                     </div>
                                 </div>
