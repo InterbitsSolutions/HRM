@@ -41,12 +41,12 @@
                         if (!empty($holiday_list->holiday_id)) {
                             echo $holiday_list->holiday_id;
                         }
-                        ?>" method="post" class="form-horizontal form-groups-bordered">                       
+                        ?>" method="post" class="form-horizontal form-groups-bordered" onsubmit="return validateHolidayDate()">                       
                             <div class="form-group">
                                 <label for="field-1" class="col-sm-3 control-label">Event Name<span class="required"> *</span></label>
 
                                 <div class="col-sm-5">
-                                    <input type="text" name="event_name"class="form-control"  value="<?php
+                                    <input type="text" name="event_name" class="form-control"  value="<?php
                                     if (!empty($holiday_list->event_name)) {
                                         echo $holiday_list->event_name;
                                     }
@@ -57,7 +57,7 @@
                                 <label for="field-1" class="col-sm-3 control-label">Description<span class="required"> *</span></label>
 
                                 <div class="col-sm-5">
-                                    <textarea style="height: 100px" name="description" class="form-control" id="field-1"   placeholder="Enter Your Description"><?php
+                                    <textarea style="height: 100px" name="description" class="form-control" id="field-1" placeholder="Enter Your Description"><?php
                                         if (!empty($holiday_list->description)) {
                                             echo $holiday_list->description;
                                         }
@@ -67,28 +67,28 @@
                             <div class="form-group">
                                 <label for="field-1" class="col-sm-3 control-label">Start Date<span class="required">*</span></label>
                                 <div class="input-group col-sm-5">
-                                    <input type="text" class="form-control datepicker" name="start_date" value="<?php
+                                    <input type="text" class="form-control datepicker" name="start_date" id="start_date" value="<?php
                                     if (!empty($holiday_list->start_date)) {
                                         echo $holiday_list->start_date;
                                     }
                                     ?>" >
 
                                     <div class="input-group-addon">
-                                        <a href="#"><i class="entypo-calendar"></i></a>
+                                        <a href="#"><i class="entypo-calendar cal_startdt"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="field-1" class="col-sm-3 control-label">End Date<span class="required">*</span></label>
                                 <div class="input-group col-sm-5">
-                                    <input type="text" class="form-control datepicker" name="end_date" value="<?php
+                                    <input type="text" class="form-control datepicker" name="end_date" id="end_date" value="<?php
                                     if (!empty($holiday_list->end_date)) {
                                         echo $holiday_list->end_date;
                                     }
                                     ?>" >
 
                                     <div class="input-group-addon">
-                                        <a href="#"><i class="entypo-calendar"></i></a>
+                                        <a href="#"><i class="entypo-calendar cal_enddt"></i></a>
                                     </div>
                                 </div>
                             </div>                        

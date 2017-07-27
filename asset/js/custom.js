@@ -374,3 +374,31 @@ function changeval2() {
 }
 // fees management fees collecion make payment end
 
+
+
+
+function validateHolidayDate()
+{
+	//alert("hello123");
+	var from = $("#start_date").val();
+	var to = $("#end_date").val();
+	
+	/*if (isNaN(from)) {
+	$("#start_date").val("");
+	return false;
+	}
+	if (isNaN(to)) {
+	$("#end_date").val("");
+	return false;
+	}*/
+
+	if(Date.parse(to) < Date.parse(from)){
+	   alert("End Date cannot be less than Start Date");
+	   $("#end_date").val("");
+	   return false;
+	}
+	else{
+		//alert("Valid Date Range");
+	   return true;
+	}
+}

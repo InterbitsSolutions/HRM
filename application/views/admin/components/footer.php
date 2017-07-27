@@ -50,6 +50,17 @@
             	return false;
         	}
 	     });
+		 
+		 $('.cal_startdt').click(function(event){
+            event.preventDefault();
+            $('#start_date').focus();
+        });
+		
+		$('.cal_enddt').click(function(event){
+            event.preventDefault();
+            $('#end_date').focus();
+        });
+		
 	  });
 	</script>
 

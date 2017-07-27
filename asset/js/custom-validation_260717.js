@@ -68,7 +68,6 @@ $(document).ready(function() {
         }
 
     });
-	
     $("#attendance-form").validate({
         rules: {            
             department_id: "required",
@@ -148,7 +147,6 @@ $(document).ready(function() {
         }
 
     });
-	
     $("#change_password").validate({
         rules: {
             old_password: "required",
@@ -175,8 +173,7 @@ $(document).ready(function() {
         }
 
     });
-	
-	
+
     // validate Main Form
     $("#form").validate({
         rules: {
@@ -244,8 +241,3 @@ $(document).ready(function() {
     });
 
 });
-
-
-
-
-
