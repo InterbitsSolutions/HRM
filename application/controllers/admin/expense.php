@@ -43,7 +43,7 @@ class Expense extends Admin_Controller {
 
     public function save_expense($id = NULL) {
         // input data
-        $data = $this->expense_model->array_from_post(array('item_name', 'purchase_from', 'purchase_date', 'amount', 'employee_id')); //input post  
+        $data = $this->expense_model->array_from_post(array('item_name', 'purchase_from', 'purchase_date', 'amount', 'employee_id','purpose_field')); //input post  
         //upload bill info
         if (!empty($_FILES['bill_copy']['name'])) {
             $old_path = $this->input->post('bill_copy_path');

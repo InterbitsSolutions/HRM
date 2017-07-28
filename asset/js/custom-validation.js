@@ -186,7 +186,6 @@ $(document).ready(function() {
             end_date: "required",
             category: "required",
             designations_id: "required",
-            employee_id: "required",
             award_name: "required",
             award_date: "required",
             date: "required",

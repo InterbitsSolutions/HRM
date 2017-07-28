@@ -1,4 +1,5 @@
 <?php include_once 'asset/admin-ajax.php'; ?>
+<?php //echo '<pre>';print_r($this->language->from_body()); ?>
 <div class="row">
     <div class="col-sm-12 wrap-fpanel">
         <div class="panel panel-default" data-collapsed="0">
@@ -49,7 +50,7 @@
                                 }
                                 ?>" data-format="dd-mm-yyyy">
                                 <div class="input-group-addon">
-                                    <a href="#"><i class="entypo-calendar"></i></a>
+                                    <a href="javascript:void(0)"><i class="entypo-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +68,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="field-1" class="col-sm-3 control-label"><?php echo $this->language->from_body()[22][4] ?> <span class="required"> *</span></label>
+                        <label for="field-1" class="col-sm-3 control-label"><?php echo $this->language->from_body()[22][4] ?></label>
 
                         <div class="col-sm-5">
                             <select class="form-control select_box" name="employee_id" >
@@ -114,7 +115,17 @@
                             <div id="msg_pdf" style="color: #e11221"></div>
                         </div>                    
                     </div>                    
+                    <div class="form-group">
+                        <label for="field-1" class="col-sm-3 control-label"><?php echo $this->language->from_body()[22][6] ?>  <span class="required"></span></label>
 
+                        <div class="col-sm-5">
+                            <input type="text" name="purpose_field" placeholder="Purpose "  class="form-control" id="field-1" value="<?php
+                            if (!empty($expense_info->purpose_field)) {
+                                echo $expense_info->purpose_field;
+                            }
+                            ?>"/>
+                        </div>
+                    </div>
                     <div class="form-group margin-top">
                         <label for="field-1" class="col-sm-3 control-label"></label>
                         <div class="col-sm-5">

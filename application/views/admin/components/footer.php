@@ -35,7 +35,7 @@
 			   return true;
 			}
     	});
-    	$('.start-calender').click(function(event){
+    	/*$('.start-calender').click(function(event){
             event.preventDefault();
             $('#start_date_event').focus();
         });
@@ -54,10 +54,18 @@
         $('.empawrd').click(function(event){
             event.preventDefault();
             $('#award_date').focus();
-        });
+        });*/
         $(document).on("keyup blur","input[name='award_amount']",function(){
             var $th = $(this);
             $th.val( $th.val().replace(/[^0-9.]/g, function(str) { return ''; } ) );
+        });
+        $(document).on("keyup blur","input[name='amount']",function(){
+            var $th = $(this);
+            $th.val( $th.val().replace(/[^0-9.]/g, function(str) { return ''; } ) );
+        });
+        $('.entypo-calendar').click(function(event){
+            event.preventDefault();
+            $(this).parent().parent().parent().find('input').focus();
         });
         $("[id^=dataTables-example]").dataTable();        
     });
